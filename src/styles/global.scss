@@ -1,0 +1,316 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $roboto;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $darkBlue;
+}
+
+.page-header {
+  background-color: $darkBlue;
+  width: 100%;
+  box-shadow: none;
+  transform: translateY(-96px);
+  transition: box-shadow 2s, transform 1s;
+  position: fixed;
+  z-index: 11;
+}
+
+.nav-down {
+  transform: translateY(0px);
+  box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
+}
+
+.no-box {
+  box-shadow: none;
+}
+
+.nav-container {
+  padding: 0 40px;
+}
+
+.top-nav {
+  img {
+    width: 50px;
+    margin: 10px 0;
+  }
+  ul li a {
+    margin-left: 40px;
+    color: $lightBlue;
+    font-family: $firaCode;
+    font-size: 13px;
+    &:hover {
+      color: $lightGreen;
+      transition: color 1s;
+    }
+  }
+}
+
+.menu-button, .navbar-toggler {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 12;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.menu-top, .menu-middle, .menu-bottom {
+  height: 3px;
+  background-color: $lightGreen;
+  margin: 5px 0;
+  transition: 0.5s;
+}
+
+.menu-top {
+  width: 35px;
+}
+
+.menu-middle {
+  width: 25px;
+}
+
+.menu-bottom {
+  width: 30px;
+}
+
+
+/* Rotate first bar */
+.change1 .menu-top {
+  transform: translate(0, 13px) rotate(315deg);
+}
+
+/* Fade out the second bar */
+.change1 .menu-middle {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change1 .menu-bottom {
+  transform: translate(0, -13px) rotate(-315deg);
+  width: 35px;
+}
+
+.mobile-nav {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(100vw);
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  color: $lightBlue;
+  z-index: 11;
+  .mobile-nav-wrapper {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 0;
+    margin-left: auto;
+    padding: 50px;
+    flex-direction: column;
+    background-color: $darkBlue;
+  }
+  .mobile-nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    ul {
+      width: 100%;
+    }
+    ul li {
+      font-family: $firaCode;
+      margin: 0 0 30px auto;
+    }
+    ul li a {
+      color: $lightBlue;
+      font-family: $firaCode;
+    }
+  }
+}
+
+.expanded-nav {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  text-decoration: none;
+}
+
+#content {
+  width: 100%;
+  padding: 0 10%;
+}
+
+.blur {
+  filter: blur(3px);
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-section {
+  @include section;
+  h1 {
+    color: $veryLight;
+    font-size: 300%;
+  }
+  .hero-nav,
+  #hero-nav {
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+  li a {
+    margin-right: 20px;
+    color: $lightGreen;
+    font-size: 13px;
+    font-family: $firaCode;
+    font-weight: 300;
+  }
+  p {
+    color: $lightBlue;
+  }
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+  button {
+    height: 50px;
+    width: 100px;
+    border-radius: 8px;
+    background-color: $darkBlue;
+    border: 2px $lightGreen solid;
+    color: $lightGreen;
+    font-family: $firaCode;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.about-section {
+  @include section;
+  h1 {
+    width: 100%;
+    white-space: nowrap;
+    color: $veryLight;
+    font-size: 225%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &:after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: $medBlue;
+      display: block;
+      position: relative;
+      margin-left: 20px;
+    }
+  }
+  p {
+    color: $lightBlue;
+    line-height: 2;
+  }
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    margin-top: 20px;
+    overflow: hidden;
+    li {
+      color: $lightBlue;
+      font-family: $firaCode;
+      font-size: 13px;
+      margin-bottom: 10px;
+      &:before {
+        content: "▹";
+        color: $lightGreen;
+        font-family: $firaCode;
+        padding-right: 20px;
+      }
+    }
+  }
+  .currently {
+    color: $lightGreen;
+    font-family: $firaCode;
+    font-size: 15px;
+    padding: 10px 0 0 0;
+  }
+}
+
+.work-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+  @include pageHeading;
+  .projects-container {
+    width: 100%;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px 15px;
+    position: relative;
+    .project {
+      background-color: $medBlue;
+      border-radius: 5px;
+      .project-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 2rem 1.75rem;
+      }
+    }
+  }
+}
+
+.contact-section {
+  @include section;
+  @include pageHeading;
+  p {
+    color: $lightBlue;
+  }
+  button {
+    height: 50px;
+    width: 100px;
+    background-color: $darkBlue;
+    border: 2px $lightGreen solid;
+    border-radius: 8px;
+    font-family: $firaCode;
+    color: $lightGreen;
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../../styles/variables';
+
+.title {
+    color: $veryLight;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: $lightBlue;
+    font-size: 13px;
+}
+
+.technologies ul {
+    display: flex;
+    flex-direction: row;
+    color: $lightBlue;
+    font-size: 12px;
+    li {
+        font-family: $firaCode;
+        padding-right: 15px;
+    }
+}
