@@ -8,25 +8,28 @@ const Featured = props => (
         <h4 className={styles.featuredTitle}>{props.title}</h4>
         <div className={styles.projectDescription}>
           <div className={styles.projectDescriptionInner}>
-            <p>
-              {props.description}
-            </p>
+            <p>{props.description}</p>
+            <div className={styles.githubLink}>
+              <a href={props.gitLink} target="_blank" rel="noopener noreferrer">
+                {props.gitLogo}
+              </a>
+            </div>
           </div>
         </div>
         <ul className={styles.technologies}>
-          {props.tech.map((i) => {
+          {props.tech.map(i => {
             return <li>{i}</li>
           })}
         </ul>
       </div>
-        <a
-          className={styles.featuredImageContainer}
-          target="_blank"
-          rel="noopener noreferrer"
-          href={props.link}
-        >
-          <img src={props.image} alt="keg track samples" />
-        </a>
+      <a
+        className={styles.featuredImageContainer}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={props.link}
+      >
+        <img src={props.image} alt="keg track samples" />
+      </a>
     </div>
   </div>
 )

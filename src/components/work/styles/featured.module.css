@@ -107,11 +107,30 @@
     opacity: 1;
     -webkit-box-shadow: none;
             box-shadow: none;
+    z-index: auto;
   }
 }
 
 .contentContainer .projectDescription .projectDescriptionInner {
   padding: 25px;
+  color: #7798ab;
+}
+
+.contentContainer .projectDescription .projectDescriptionInner .githubLink {
+  position: relative;
+}
+
+.contentContainer .projectDescription .projectDescriptionInner .githubLink a {
+  height: 30px;
+  width: auto;
+  position: relative;
+  z-index: 9999;
+}
+
+.contentContainer .projectDescription .projectDescriptionInner .githubLink svg {
+  position: relative;
+  height: 30px;
+  width: auto;
   color: #7798ab;
 }
 

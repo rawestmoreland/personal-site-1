@@ -71,10 +71,26 @@
             height: 100%;
             opacity: 1;
             box-shadow: none;
+            z-index: auto;
         }
         .projectDescriptionInner {
             padding: 25px;
             color: $lightBlue;
+            .githubLink {
+                position: relative;
+                a {
+                    height: 30px;
+                    width: auto;
+                    position: relative;
+                    z-index: 9999;
+                }
+                svg {
+                    position: relative;
+                    height: 30px;
+                    width: auto;
+                    color: $lightBlue;
+                }
+            }
         }
     }
     .technologies {
