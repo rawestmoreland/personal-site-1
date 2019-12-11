@@ -5,9 +5,9 @@ const About = props => {
     <section id="about" className="about-section">
       <h1>About Me</h1>
       <p>
-        Hi there. I’m a full stack web developer in Houston, Texas and I
-        loveworking with clients to bring their ideas to the internet. I strive
-        to build high-quality, responsive websites, web apps, and mobile
+        Hi there. I’m a full stack web developer in Houston, Texas and I love
+        working with clients to bring their ideas to the internet. I strive to
+        build high-quality, responsive websites, web apps, and mobile
         applications that incorporate fast and scalable backends.
       </p>
       <p className="currently">Currently working with...</p>
