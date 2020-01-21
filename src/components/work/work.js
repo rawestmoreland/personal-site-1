@@ -37,7 +37,7 @@ const Work = props => {
         description={
           "A homebrewing blog that features recipes, brewing techniques and beer tasting notes. A custom WordPress theme."
         }
-        tech={["Wordpress", "HTML5/CSS3"]}
+        tech={["WordPress", "HTML5/CSS3"]}
         image={sbbImage}
         link={"http://www.smallbatchbru.com"}
       />
