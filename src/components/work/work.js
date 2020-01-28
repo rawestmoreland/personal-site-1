@@ -28,7 +28,7 @@ const Work = props => {
         }
         tech={["React.js", "CheckWX API"]}
         image={weatherImage}
-        link={"https://avwx-metar.herokuapp.com"}
+        link={"https://avwx-react.netlify.com/"}
         gitLogo={gitLogo}
         gitLink="https://www.github.com/rawestmoreland/react-metar-app"
       />
