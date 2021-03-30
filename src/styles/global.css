@@ -14,6 +14,10 @@ body {
   background-color: #0A192F;
 }
 
+.resume-container {
+  height: 100vh;
+}
+
 .page-header {
   background-color: #0A192F;
   width: 100%;
@@ -63,7 +67,8 @@ body {
   transition: color 1s;
 }
 
-.menu-button, .navbar-toggler {
+.menu-button,
+.navbar-toggler {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,11 +84,14 @@ body {
   cursor: pointer;
 }
 
-.menu-button:focus, .navbar-toggler:focus {
+.menu-button:focus,
+.navbar-toggler:focus {
   outline: none;
 }
 
-.menu-top, .menu-middle, .menu-bottom {
+.menu-top,
+.menu-middle,
+.menu-bottom {
   height: 3px;
   background-color: #02cbb7;
   margin: 5px 0;

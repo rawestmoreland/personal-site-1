@@ -12,6 +12,10 @@ body {
   background-color: $darkBlue;
 }
 
+.resume-container {
+  height: 100vh;
+}
+
 .page-header {
   background-color: $darkBlue;
   width: 100%;
@@ -52,7 +56,8 @@ body {
   }
 }
 
-.menu-button, .navbar-toggler {
+.menu-button,
+.navbar-toggler {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -64,7 +69,9 @@ body {
   }
 }
 
-.menu-top, .menu-middle, .menu-bottom {
+.menu-top,
+.menu-middle,
+.menu-bottom {
   height: 3px;
   background-color: $lightGreen;
   margin: 5px 0;
@@ -82,7 +89,6 @@ body {
 .menu-bottom {
   width: 30px;
 }
-
 
 /* Rotate first bar */
 .change1 .menu-top {
