@@ -12,8 +12,8 @@ body {
   background-color: $darkBlue;
 }
 
-.resume-container {
-  height: 100vh;
+.resume-section {
+  @include section;
 }
 
 .page-header {

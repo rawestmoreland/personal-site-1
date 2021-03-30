@@ -1,6 +1,6 @@
 import React from "react"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
+import SEO from "./seo"
+import Layout from "./layout"
 import "animate.css/animate.min.css"
 import "../styles/global.css"
 
@@ -10,7 +10,7 @@ const ResumePage = () => {
   return (
     <Layout>
       <SEO title="Resume" />
-      <div className="resume-container">
+      <div id="resume" className="resume-section">
         <iframe src={pdfSource} width="100%" height="100%"></iframe>
       </div>
     </Layout>

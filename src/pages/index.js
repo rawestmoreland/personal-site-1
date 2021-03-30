@@ -8,8 +8,8 @@ import Hero from "../components/hero"
 import About from "../components/about"
 import Work from "../components/work/work"
 import Contact from "../components/contact/contact"
+import Resume from "../components/resume"
 class IndexPage extends Component {
-
   render() {
     return (
       <Layout>
@@ -19,6 +19,7 @@ class IndexPage extends Component {
           <About />
           <Work />
           <Contact />
+          <Resume />
         </div>
       </Layout>
     )
