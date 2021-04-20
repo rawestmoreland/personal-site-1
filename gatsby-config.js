@@ -2,14 +2,14 @@ module.exports = {
   siteMetadata: {
     title: `Richard Westmoreland`,
     description: `Hi, I'm Richard. I'm a web developer based in Houston, Texas. I build high-quality, responsive websites and applications`,
-    author: `Richard Westmoreland`
+    author: `Richard Westmoreland`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-92825458-5",
+        trackingId: "G-53GFDEJJ71",
       },
     },
     {
