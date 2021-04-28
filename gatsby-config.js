@@ -9,16 +9,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          'G-53GFDEJJ71',
-          'UA-92825458-5',
-        ],
+        trackingIds: ["G-53GFDEJJ71", "UA-92825458-5"],
         pluginConfig: {
           // Puts tracking script in the head instead of the body
           head: true,
         },
       },
-    }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
