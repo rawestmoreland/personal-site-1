@@ -8,7 +8,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import {document} from 'browser-monads'
+import { document } from "browser-monads"
 
 import Header from "./header"
 import "../styles/global.css"
@@ -24,7 +24,6 @@ const Layout = ({ children }) => {
     } else {
       document.body.style = ""
     }
-    console.log("changed")
   }
 
   const data = useStaticQuery(graphql`
@@ -32,6 +31,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          keywords
         }
       }
     }
@@ -44,9 +44,10 @@ const Layout = ({ children }) => {
         change1={change1}
         siteTitle={data.site.siteMetadata.title}
       />
-      {console.log(Header.propTypes)}
       <div>
-        <main className={change1 && "blur"} id="content">{children}</main>
+        <main className={change1 && "blur"} id="content">
+          {children}
+        </main>
       </div>
     </>
   )
