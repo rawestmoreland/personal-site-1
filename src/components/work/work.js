@@ -1,6 +1,7 @@
 import React from "react"
 import Featured from "./featured"
 import kegTrackImage from "../../images/kegtrackPortfolio.svg"
+import tfLawImage from "../../images/tflaw_screenshot.png"
 import sbbImage from "../../images/sbbShot.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
@@ -12,6 +13,15 @@ const Work = props => {
   return (
     <section id="work" className="work-section">
       <h1>Some of My Work</h1>
+      <Featured
+        title={"TF Law LLP"}
+        description={
+          "TF Law, LLP is a law practice in Greenville south Carolina. The site is built using Gatsby for the frontend and a custom Strapi.io CMS for the backend. GraphQL is used to query the CMS and display all content. Deployed via Netlify with a GitHub CI/CD pipeline."
+        }
+        tech={["Gatsby, Strapi.io, Netlify, GraphQL"]}
+        image={tfLawImage}
+        link={"https://www.tflawsc.com"}
+      />
       <Featured
         title={"Keg Track App"}
         description={
