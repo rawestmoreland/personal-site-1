@@ -1,8 +1,8 @@
 {
-  "name": "Richard Westmoreland Portfolio",
+  "name": "portfolio",
   "private": true,
-  "description": "Richard's Portfolio Site",
-  "version": "0.1.0",
+  "description": "My portfolio site",
+  "version": "0.2.0",
   "author": "Richard Westmoreland <rawestmoreland@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
