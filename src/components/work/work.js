@@ -16,7 +16,7 @@ const Work = props => {
       <Featured
         title={"TF Law LLP"}
         description={
-          "TF Law, LLP is a law practice in Greenville south Carolina. The site is built using Gatsby for the frontend and a custom Strapi.io CMS for the backend. GraphQL is used to query the CMS and display all content. Deployed via Netlify with a GitHub CI/CD pipeline."
+          "TF Law, LLP is a law practice in Greenville south Carolina. The site is built using Gatsby for the frontend and a custom Sanity.io CMS for the backend. GraphQL is used to query the CMS and display all content. Deployed via Netlify with a GitHub CI/CD pipeline."
         }
         tech={["Gatsby, Strapi.io, Netlify, GraphQL"]}
         image={tfLawImage}
