@@ -4,7 +4,7 @@ import Layout from "./layout"
 import "animate.css/animate.min.css"
 import "../styles/global.css"
 
-import pdfSource from "../images/resume_march_2021.pdf"
+import pdfSource from "../images/Resume_Aug_2021.pdf"
 
 const ResumePage = () => {
   return (
