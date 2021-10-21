@@ -20,7 +20,7 @@ const Work = props => {
         }
         tech={["Gatsby, Strapi.io, Netlify, GraphQL"]}
         image={tfLawImage}
-        link={"https://www.tflawsc.com"}
+        link={"https://sanity-touma-fedalei-web.netlify.app"}
       />
       <Featured
         title={"Keg Track App"}
