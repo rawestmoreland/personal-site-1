@@ -1,21 +1,19 @@
 import PropTypes from "prop-types"
 import React, { Component } from "react"
-import {window} from 'browser-monads'
+import { window } from "browser-monads"
 import logo from "../images/logo.svg"
 
 class Header extends Component {
-
   constructor(props) {
     super(props)
 
     this.state = {
       prevScrollpos: window.pageYOffset,
-      scrolling: false
+      scrolling: false,
     }
   }
 
   handleScroll = () => {
-
     const currentScrollPos = window.pageYOffset
     const visible = this.state.prevScrollpos > currentScrollPos
 
@@ -23,7 +21,6 @@ class Header extends Component {
       prevScrollpos: currentScrollPos,
       scrolling: visible,
     })
-
   }
 
   componentDidMount() {
@@ -40,12 +37,22 @@ class Header extends Component {
     const change1 = this.props.change1
     const toggleNav = this.props.toggleNav
     return (
-      <header id="page-header" className={`nav-container sticky-top page-header ${!this.state.scrolling || this.state.prevScrollpos === 0 ? "" : "nav-down"} ${change1 ? "no-box" : ""}`}>
+      <header
+        id="page-header"
+        className={`nav-container sticky-top page-header ${
+          !this.state.scrolling || this.state.prevScrollpos === 0
+            ? ""
+            : "nav-down"
+        } ${change1 ? "no-box" : ""}`}
+      >
         <nav className="navbar navbar-expand-md top-nav">
           <a className="navbar-brand" href="#home">
             <img src={logo} alt="logo"></img>
           </a>
-          <button className={`menu-button navbar-toggler ${change1 ? "change1" : ""}`} onClick={toggleNav}>
+          <button
+            className={`menu-button navbar-toggler ${change1 ? "change1" : ""}`}
+            onClick={toggleNav}
+          >
             <div className="menu-top"></div>
             <div className="menu-middle"></div>
             <div className="menu-bottom"></div>
@@ -68,8 +75,12 @@ class Header extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="https://www.richardawestmoreland.com/resume.pdf" target="_blank"
-          rel="noopener noreferrer">
+                <a
+                  className="nav-link"
+                  href="https://www.richardawestmoreland.com/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   resume
                 </a>
               </li>
@@ -80,11 +91,31 @@ class Header extends Component {
           <div className="mobile-nav-wrapper">
             <nav className="mobile-nav-links">
               <ul>
-                <li><a onClick={toggleNav} href="#about">about</a></li>
-                <li><a onClick={toggleNav} href="#work">work</a></li>
-                <li><a onClick={toggleNav} href="#contact">contact</a></li>
-                <li><a onClick={toggleNav} href="https://www.richardawestmoreland.com/resume.pdf" target="_blank"
-          rel="noopener noreferrer">resume</a></li>
+                <li>
+                  <a onClick={toggleNav} href="#about">
+                    about
+                  </a>
+                </li>
+                <li>
+                  <a onClick={toggleNav} href="#work">
+                    work
+                  </a>
+                </li>
+                <li>
+                  <a onClick={toggleNav} href="#contact">
+                    contact
+                  </a>
+                </li>
+                <li>
+                  <a
+                    onClick={toggleNav}
+                    href="https://drive.google.com/file/d/1UylzMsAo8kgn2DqGVnC2Z3lsFX6IfbW7/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    resume
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -92,16 +123,14 @@ class Header extends Component {
       </header>
     )
   }
-
-  
 }
 
 Header.propTypes = {
-  siteTitle: PropTypes.string
+  siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``
+  siteTitle: ``,
 }
 
 export default Header
