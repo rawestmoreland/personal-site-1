@@ -77,7 +77,7 @@ class Header extends Component {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="https://www.richardawestmoreland.com/resume.pdf"
+                  href="https://drive.google.com/file/d/1UylzMsAo8kgn2DqGVnC2Z3lsFX6IfbW7/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
